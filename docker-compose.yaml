@@ -1,0 +1,13 @@
+version: "3"
+services:
+  db:
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "node_login_db"
+      TZ: Asia/Tokyo
+    image: mysql:5.7
+    ports:
+      - "55559:3306"
+    volumes:
+      - ${HOME}/data/node_login_db:/var/lib/mysql
+
